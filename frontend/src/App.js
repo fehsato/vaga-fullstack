@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 function ButtonSearch() {
   function handleClick() {
-    alert('O botão está funcionando!');
+    alert('O botão está funcionando');
   }
 
   return (

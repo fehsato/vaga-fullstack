@@ -1,0 +1,1 @@
+INSERT INTO Leite(NAME) VALUES ('Nestlé Ninho');

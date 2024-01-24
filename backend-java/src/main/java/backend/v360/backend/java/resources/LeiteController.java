@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -85,6 +86,23 @@ public ResponseEntity<List<Leite>> getLeite(@RequestParam(name = "termo", requir
         .toUri();
         return ResponseEntity.created(location).body(newLeite);
     }
+
+    // Atualiza um leite existente pelo ID
+@PutMapping("/{id}")
+public ResponseEntity<Leite> updateLeite(@PathVariable int id, @RequestBody Leite updatedLeite) {
+    System.out.println("Recebendo solicitação de atualização para o leite com ID: " + id);
+    System.out.println("Dados atualizados: " + updatedLeite);
+
+    // Lógica para atualizar o leite com os dados fornecidos em updatedLeite
+    // Certifique-se de validar se o leite com o ID fornecido realmente existe
+
+    Leite leite = leiteService.updateLeite(id, updatedLeite);
+
+    System.out.println("Leite atualizado: " + leite);
+
+    return ResponseEntity.ok().body(leite);
+}
+
 
     
 }

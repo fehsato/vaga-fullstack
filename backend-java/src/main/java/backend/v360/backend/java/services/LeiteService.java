@@ -49,5 +49,19 @@ public class LeiteService {
     return leiteRepository.findByNomeIgnoreCaseContaining(nome);
 }
 
+    // Atualiza um leite existente pelo ID
+    public Leite updateLeite(int id, Leite updatedLeite) {
+        Leite existingLeite = leiteRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Leite não encontrado com ID: " + id));
+
+        // Atualize os campos relevantes do existingLeite com os dados de updatedLeite
+        existingLeite.setNome(updatedLeite.getNome());
+
+        // Salve as alterações no repositório
+        return leiteRepository.save(existingLeite);
+    }
+
+    
+
     
 }

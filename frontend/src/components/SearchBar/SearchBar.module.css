@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input {
+    margin-right: 10px;
+    padding: 8px 400px;
+    font-size: 16px;
+    border: 2px solid #548db3;
+    border-radius: 5px;
+  }
+  
+  .input:focus {
+    outline: none;
+  }

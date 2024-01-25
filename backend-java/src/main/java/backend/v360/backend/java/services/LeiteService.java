@@ -34,14 +34,22 @@ public class LeiteService {
     // Exclui um leite pelo ID
     public void delete(int id) {
         Leite leite = getLeiteById(id);
-        leiteRepository.delete(leite);
+        if (leite != null) {
+            leiteRepository.delete(leite);
+        } else {
+            // Trate o caso em que leite é nulo, se necessário
+            throw new IllegalArgumentException("O objeto Leite não pode ser nulo.");
+        }
     }
 
     // Salva ou atualiza um leite
-    public Leite save(Leite leite) {
+    public Leite save(Leite leite) 
+        {if (leite != null) {
         return leiteRepository.save(leite);
-
-        
+        } else {
+        // Trate o caso em que leite é nulo, se necessário
+        throw new IllegalArgumentException("O objeto Leite não pode ser nulo.");
+        }        
     }
 
     // Busca leites pelo nome, ignorando maiúsculas e minúsculas, e permitindo pesquisa por parte do nome

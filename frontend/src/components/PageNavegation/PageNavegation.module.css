@@ -1,0 +1,25 @@
+/* PageNavigation.module.css */
+
+.pageNavigationContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pageNavigationContainer button {
+    margin: 0px 0px 10px 0px;
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #346d93;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .pageNavigationContainer button:hover {
+    background-color: #346d93;
+    color: #fff;
+  }
+  

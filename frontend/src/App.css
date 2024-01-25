@@ -1,3 +1,69 @@
-.avatar {
-  border-radius: 50%;
+.myAppContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #ffffff;
+  color: #346d93;
+  padding: 30px 100px;
+  text-align: center;
+  font-size: 24px;
+  font-family: Helvetica;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+.titulo {
+  color: #346d93;
+  padding: 30px 100px;
+  text-align: center;
+  font-size: 70px;
+  font-family: Helvetica;
+  border: none;
+  animation: scaleAnimation 2s infinite;
+}
+
+
+
+.buttonContainer {
+  margin: 15px 0px 0px 20px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.loadingMessage {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.buttonCadastrar{
+  padding: 10px 15px;
+  font-size: 15px;
+  background-color: #346d93;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.35s;
+  font-family: 'Helvetica';
+}
+
+.buttonCadastrar:hover {
+  background-color: #a5c8df;
 }

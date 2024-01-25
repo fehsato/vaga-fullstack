@@ -1,0 +1,72 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .inputField,.inputText,.button, .modalTitle,.buttonCancel {
+    font-family: 'Helvetica';
+}
+  .modalTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .inputField {
+    display: block;
+    padding: 15px 50px;
+    margin-bottom: 2px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .inputText {
+    padding: 15px 50px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .button {
+    background-color: #346d93;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .buttonCancel {
+    background-color: #346d93;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .button:hover {
+    background-color: #a5c8df;
+  }
+
+  .buttonCancel:hover{
+    background-color: #da3f3f;
+  }
+
+
+  

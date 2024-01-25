@@ -1,0 +1,50 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-sizing: border-box;
+    font-family: 'Helvetica';
+  }
+  
+  thead {
+    background-color: #346d93;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 6px;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Helvetica';
+  }
+  
+  th {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-family: 'Helvetica';
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .edit, .delete {
+    padding: 10px 23px;
+    background-color: #346d93;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Helvetica';
+  }
+  
+  .edit:hover, .delete:hover {
+    background-color: #a5c8df;
+  }
+  

@@ -1,18 +1,47 @@
-import React from 'react';
-import styles from './LeiteTable.module.css'
+// LeiteTable.js
+import React, { useState } from 'react';
+import styles from './LeiteTable.module.css';
 
-function LeiteTable({ currentItems, handleEdit, handleDelete }) {
+function LeiteTable({ currentItems, handleEdit, handleDelete, sortColumn, setSortColumn, sortDirection, setSortDirection }) {
+  const handleSort = (column) => {
+    if (sortColumn === column) {
+      setSortDirection((prevDirection) => (prevDirection === 'asc' ? 'desc' : 'asc'));
+    } else {
+      setSortColumn(column);
+      setSortDirection('asc');
+    }
+  };
+
+  const getSortIcon = (column) => {
+    if (sortColumn === column) {
+      return sortDirection === 'asc' ? '▲' : '▼';
+    }
+    return null;
+  };
+
+  const sortedItems = [...currentItems].sort((a, b) => {
+    const order = sortDirection === 'asc' ? 1 : -1;
+
+    if (sortColumn === 'id') {
+      return order * (a.id - b.id);
+    }
+
+    return 0;
+  });
+
   return (
     <table className={styles.table}>
       <thead>
         <tr>
-          <th>ID</th>
+          <th onClick={() => handleSort('id')}>
+            ID {getSortIcon('id')}
+          </th>
           <th>Descrição</th>
           <th>Ações</th>
         </tr>
       </thead>
       <tbody>
-        {currentItems.map((leite) => (
+        {sortedItems.map((leite) => (
           <tr key={leite.id}>
             <th>{leite.id}</th>
             <td>{leite.nome}</td>
@@ -32,3 +61,4 @@ function LeiteTable({ currentItems, handleEdit, handleDelete }) {
 }
 
 export default LeiteTable;
+

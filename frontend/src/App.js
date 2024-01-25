@@ -12,6 +12,8 @@ function MyApp() {
   const [editLeite, setEditLeite] = useState({ id: null, nome: '' });
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
+  const [sortColumn, setSortColumn] = useState('id');
+  const [sortDirection, setSortDirection] = useState('asc');
 
   useEffect(() => {
     handleSearch();
@@ -87,7 +89,19 @@ function MyApp() {
     } catch (error) {
       console.error('Erro na solicitação:', error.message);
     }
+
+    // Modifique a função handleSort para ordenar a lista
+    const handleSort = (column) => {
+      if (sortColumn === column) {
+    // Se já estiver ordenando pela mesma coluna, alterne a direção
+    setSortDirection((prevDirection) => (prevDirection === 'asc' ? 'desc' : 'asc'));
+  }   else {
+    // Se estiver ordenando por uma nova coluna, defina a coluna e a direção padrão
+      setSortColumn(column);
+      setSortDirection('asc');
+    }
   };
+};
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -110,7 +124,15 @@ function MyApp() {
 
       {loading && <p className="loadingMessage">Carregando...</p>}
 
-      <LeiteTable currentItems={currentItems} handleEdit={handleEdit} handleDelete={handleDelete} />
+      <LeiteTable
+        currentItems={currentItems}
+        handleEdit={handleEdit}
+        handleDelete={handleDelete}
+        sortColumn={sortColumn}
+        setSortColumn={setSortColumn}
+        sortDirection={sortDirection}
+        setSortDirection={setSortDirection}
+      />
 
       <PageNavigation pageNumbers={pageNumbers} setCurrentPage={setCurrentPage} />
 

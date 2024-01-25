@@ -14,7 +14,7 @@ table {
   
   th, td {
     border: 1px solid #ccc;
-    padding: 6px;
+    padding: 6px 10px;
     font-size: 16px;
     text-align: center;
     font-family: 'Helvetica';
@@ -33,17 +33,33 @@ table {
     justify-content: space-around;
   }
   
-  .edit, .delete {
-    padding: 10px 23px;
+  .edit {
+    padding: 10px 30px;
     background-color: #346d93;
     color: #fff;
+    margin-right: -50px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 15px;
     transition: background-color 0.3s ease;
     font-family: 'Helvetica';
   }
   
+  .delete{
+    padding: 10px 30px;
+    background-color: #346d93;
+    color: #fff;
+    margin-left: 1px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    font-family: 'Helvetica';
+
+
+  }
   .edit:hover, .delete:hover {
     background-color: #a5c8df;
   }

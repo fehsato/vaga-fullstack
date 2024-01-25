@@ -3,7 +3,7 @@ import LeiteModal from './components/LeiteModal/LeiteModal';
 import LeiteTable from './components/LeiteTable/LeiteTable';
 import PageNavigation from './components/PageNavegation/PageNavigation';
 import SearchBar from './components/SearchBar/SearchBar';
-import style from './App.css';
+import styles from './App.css';
 
 function MyApp() {
   const [searchResults, setSearchResults] = useState([]);

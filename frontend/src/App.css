@@ -1,5 +1,5 @@
 .myAppContainer {
-  max-width: 100%;
+  max-width: 70%;
   margin: 0 auto;
   padding: 20px;
   flex-direction: column;
@@ -28,20 +28,20 @@
   }
 
 }
+
 .titulo {
   color: #346d93;
   padding: 30px 100px;
   text-align: center;
-  font-size: 70px;
+  font-size: 60px;
   font-family: Helvetica;
   border: none;
+  margin-top: 10px;
   animation: scaleAnimation 2s infinite;
 }
 
-
-
 .buttonContainer {
-  margin: 15px 0px 0px 20px;
+  margin: 10px -100px 0px 20px;
   align-items: center;
   justify-content: space-between;
   display: flex;

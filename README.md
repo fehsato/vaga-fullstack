@@ -61,6 +61,7 @@ Para a implementação do sistema, crie um fork desse repositório e adicione to
 
 Além do funcionamento do sistema, será avaliada a organização do código, comentários e a identidade visual do sistema.
 
+## Tanto para o frontend como para o backend, é necessário baixar o repositório
 
 ## Instruções para construção (build) e execução (run) do frontend
 
@@ -78,9 +79,9 @@ Além do funcionamento do sistema, será avaliada a organização do código, co
 
 ## Instruções para construção (build) e execução (run) do backend
 
-1- Primeiramente, é necessário ter o banco de dados PostgresSQL ou o PgAdmin instalado na máquina (eu usei o PgAdmin)
+1- Primeiramente, é necessário ter o banco de dados PgAdmin instalado na máquina 
 
-2- Em seguida, dentro do aplicativo, é necessário criar um banco de dados novo (usando a porta 5500)
+2- Em seguida, dentro do aplicativo, é necessário criar um banco de dados novo (é npreciso usar a porta 5500. Se a porta já estiver em uso, é necessário alterar a porta no próprio código, no arquivo application.proprieties)
 
 3- Depois, é necessário fazer o restore do banco de dados usando o arquivo Leites.sql (que está na raiz da aplicação)
 

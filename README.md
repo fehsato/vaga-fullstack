@@ -81,7 +81,7 @@ Além do funcionamento do sistema, será avaliada a organização do código, co
 
 1- Primeiramente, é necessário ter o banco de dados PgAdmin instalado na máquina 
 
-2- Em seguida, dentro do aplicativo, é necessário criar um banco de dados novo (é npreciso usar a porta 5500. Se a porta já estiver em uso, é necessário alterar a porta no próprio código, no arquivo application.proprieties)
+2- Em seguida, dentro do aplicativo, é necessário criar um banco de dados novo (é preciso usar a porta 5500. Se a porta já estiver em uso, é necessário alterar a porta no próprio código, no arquivo application.proprieties)
 
 3- Depois, é necessário fazer o restore do banco de dados usando o arquivo Leites.sql (que está na raiz da aplicação)
 

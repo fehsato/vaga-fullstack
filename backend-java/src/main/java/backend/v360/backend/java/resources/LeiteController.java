@@ -3,7 +3,6 @@ package backend.v360.backend.java.resources;
 import java.net.URI;
 import java.util.Collections;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
 import backend.v360.backend.java.entities.Leite;
 import backend.v360.backend.java.services.LeiteService;
 
@@ -46,17 +44,17 @@ public ResponseEntity<List<Leite>> getLeite(@RequestParam(name = "termo", requir
     List<Leite> leites;
 
     if (termo != null && !termo.isEmpty()) {
-        // Se o termo não for nulo nem vazio, pesquisa por ID ou nome
+        //Se o termo não for nulo nem vazio, pesquisa por ID ou nome
         try {
             int id = Integer.parseInt(termo);
-            // Se a conversão for bem-sucedida, pesquisa por ID
+            //Se a conversão for bem-sucedida, pesquisa por ID
             leites = Collections.singletonList(leiteService.getLeiteById(id));
         } catch (NumberFormatException e) {
-            // Se a conversão falhar, pesquisa por nome
+            //Se a conversão falhar, pesquisa por nome
             leites = leiteService.getLeiteByNome(termo);
         }
     } else {
-        // Se o termo for nulo ou vazio, retorna todos os leites
+        //Se o termo for nulo ou vazio, retorna todos os leites
         leites = leiteService.getLeite();
     }
 
@@ -87,23 +85,16 @@ public ResponseEntity<List<Leite>> getLeite(@RequestParam(name = "termo", requir
         return ResponseEntity.created(location).body(newLeite);
     }
 
-    // Atualiza um leite existente pelo ID
-@PutMapping("/{id}")
-public ResponseEntity<Leite> updateLeite(@PathVariable int id, @RequestBody Leite updatedLeite) {
-    System.out.println("Recebendo solicitação de atualização para o leite com ID: " + id);
-    System.out.println("Dados atualizados: " + updatedLeite);
+    //Atualiza um leite existente pelo ID
+    @PutMapping("/{id}")
+    public ResponseEntity<Leite> updateLeite(@PathVariable int id, @RequestBody Leite updatedLeite) {
+        System.out.println("Recebendo solicitação de atualização para o leite com ID: " + id);
+        System.out.println("Dados atualizados: " + updatedLeite);
 
     // Lógica para atualizar o leite com os dados fornecidos em updatedLeite
-    // Certifique-se de validar se o leite com o ID fornecido realmente existe
-
     Leite leite = leiteService.updateLeite(id, updatedLeite);
-
     System.out.println("Leite atualizado: " + leite);
-
     return ResponseEntity.ok().body(leite);
-}
-
-
-    
+    }  
 }
 

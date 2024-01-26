@@ -19,7 +19,7 @@ public class Leite {
 
     }
 
-// Controlador
+//Controlador
     public Leite(Integer id, String nome) {
         this.id = id;
         this.nome = nome;
@@ -36,7 +36,7 @@ public class Leite {
     }
 
 
-// Gets e setters
+//Gets e setters
     public Integer getId() {
         return id;
     }

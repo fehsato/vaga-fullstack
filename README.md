@@ -64,8 +64,26 @@ Além do funcionamento do sistema, será avaliada a organização do código, co
 
 ## Instruções para construção (build) e execução (run) do frontend
 
-<preencha as instruções nesse tópico>
+1- Para abrir o frontend da aplicação, o backend precisa estar funcionando primeiro
+
+2- Quando o backend estiver rodando, abra o terminal (eu uso o git bash)
+
+3- Vá para o diretório chamado 'frontend' (com o comando 'cd frontend')
+
+4- Em seguida, dê o start na aplicação (com o comando 'npm start')
+
+5- Se ele não entrar direto, o endereço é 'localhost:3000'
+
+
 
 ## Instruções para construção (build) e execução (run) do backend
 
-<preencha as instruções nesse tópico>
+1- Primeiramente, é necessário ter o banco de dados PostgresSQL ou o PgAdmin instalado na máquina (eu usei o PgAdmin)
+
+2- Em seguida, dentro do aplicativo, é necessário criar um banco de dados novo (usando a porta 5500)
+
+3- Depois, é necessário fazer o restore do banco de dados usando o arquivo Leites.sql (que está na raiz da aplicação)
+
+4- Se tudo der certo, abra o VsCode e rode o código java (o start fica no arquivo BackendJavaApplication.java)
+
+5- O endereço do backend é 'localhost:8080/leites'. Abrirá todos os registros existentes no banco de dados
